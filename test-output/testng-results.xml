@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-11-15T01:57:00 EET" name="Default suite" finished-at="2023-11-15T01:57:32 EET" duration-ms="31933">
+    <groups>
+    </groups>
+    <test started-at="2023-11-15T01:57:00 EET" name="Default test" finished-at="2023-11-15T01:57:32 EET" duration-ms="31933">
+      <class name="Tests.google">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.google@593aaf41]" started-at="2023-11-15T01:57:00 EET" name="setup" finished-at="2023-11-15T01:57:12 EET" duration-ms="12059" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="search()[pri:1, instance:Tests.google@593aaf41]" started-at="2023-11-15T01:57:12 EET" name="search" finished-at="2023-11-15T01:57:32 EET" duration-ms="19649" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method is-config="true" signature="close()[pri:0, instance:Tests.google@593aaf41]" started-at="2023-11-15T01:57:32 EET" name="close" finished-at="2023-11-15T01:57:32 EET" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- Tests.google -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
