@@ -1,12 +1,20 @@
 package POM;
 
+import java.util.Optional;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class mainBar {
 
 	static WebElement getBarElement() {
 		return baseClass.getDriver().findElement(By.id("st-sc"));
+	}
+
+	static WebElement getAllCategoriesElement() {
+		return getBarElement().findElement(By.cssSelector("div[class=navbar_all-categories-tab]"));
 	}
 
 	public static void changeLanguage(String newLang) {
@@ -34,4 +42,31 @@ public class mainBar {
 		WebElement brandsButton = getBarElement().findElement(By.xpath("//a[text()='" + tapName + "']"));
 		brandsButton.click();
 	}
+
+	public static void openCategory(String categoryName) {
+		baseClass.hoverOn(getAllCategoriesElement());
+		getAllCategoriesElement().findElement(By.xpath("//a[text()='" + categoryName + "']")).click();
+
+	}
+
+	public static void openSubCategory(String mainCategoryName, String subName) {
+
+		baseClass.hoverOn(getAllCategoriesElement());
+		baseClass.hoverOn(getAllCategoriesElement().findElement(By.xpath("//a[text()='" + mainCategoryName + "']")));
+
+		getAllCategoriesElement().findElement(By.xpath("//a[text()='" + subName + "']")).click();
+
+	}
+
+	public static void openCart() {
+
+		baseClass.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		getBarElement().findElement(By.cssSelector("div[class='col-3 Cart-tab']")).click();
+	}
+
+	public static void openRegesterationWindow()
+	{
+		getBarElement().findElement(By.cssSelector("div[class='register-box']")).click();
+	}
+	
 }
