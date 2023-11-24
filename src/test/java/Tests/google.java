@@ -5,8 +5,11 @@ import org.testng.annotations.Test;
 
 import POM.baseClass;
 import POM.cartSideBar;
+import POM.clientData;
 import POM.homePage;
+import POM.loginForm;
 import POM.mainBar;
+import POM.registrationForm;
 
 public class google extends baseClass {
 
@@ -26,8 +29,31 @@ public class google extends baseClass {
 		// mainBar.openCategory("Supermarket");
 
 		// mainBar.openSubCategory("Supermarket", "Breakfast");
-		//mainBar.openCart();
-		//cartSideBar.close();
-		mainBar.openRegesterationWindow();
+		// mainBar.openCart();
+		// cartSideBar.close();
+	}
+
+	@Test(priority = 2)
+	void regester() throws InterruptedException {
+		Thread.sleep(10000);
+		//mainBar.openRegistrationWindow();
+
+		// clientData newClient = new clientData();
+		// newClient.fullName = "abdelrahman hossam";
+		// newClient.email = "abdelrahman@test.com";
+		// newClient.phoneNumber = "01124393722";
+		// newClient.password = "12345678";
+		// newClient.passwordConfirmatiom = "12345678";
+		// registrationForm.setRegistrationData(newClient);
+		// registrationForm.agreeTerms();
+		// registrationForm.clickRegister();
+		// registrationForm.close();
+
+		mainBar.openLoginWindow();
+		loginForm.setLoginData("abdelrahman@test.com", "12345678");
+		loginForm.clickLogin();
+		//loginForm.close();
+
+		
 	}
 }

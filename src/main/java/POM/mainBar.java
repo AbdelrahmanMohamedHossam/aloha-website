@@ -64,9 +64,11 @@ public class mainBar {
 		getBarElement().findElement(By.cssSelector("div[class='col-3 Cart-tab']")).click();
 	}
 
-	public static void openRegesterationWindow()
-	{
+	public static void openRegistrationWindow() {
 		getBarElement().findElement(By.cssSelector("div[class='register-box']")).click();
 	}
-	
+
+	public static void openLoginWindow() {
+		getBarElement().findElement(By.cssSelector("div[class=\"login-icon mx-2\"]")).click();
+	}
 }

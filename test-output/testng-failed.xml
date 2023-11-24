@@ -6,6 +6,7 @@
       <class name="Tests.google">
         <methods>
           <include name="setup"/>
+          <include name="regester"/>
           <include name="search"/>
         </methods>
       </class> <!-- Tests.google -->
